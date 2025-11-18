@@ -1,23 +1,21 @@
-// src/firebaseConfig.js
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore"; // Optional: If you plan to use Firestore directly from the frontend
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDD1PyslzTmA1QIx0YSzwn1vidP63LkKDQ",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "geministore-4dbf8", // This should match your backend's project_id
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
-  // measurementId: "YOUR_MEASUREMENT_ID" // Optional, if using Google Analytics
+  authDomain: "geministore-4dbf8.firebaseapp.com",
+  projectId: "geministore-4dbf8",
+  storageBucket: "geministore-4dbf8.firebasestorage.app",
+  messagingSenderId: "276507236259",
+  appId: "1:276507236259:web:e71c6f0cf88e766c41ac16",
+  measurementId: "G-HXCZ0L3RXE"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Get service instances
-export const auth = getAuth(app); // Export auth for authentication
-export const db = getFirestore(app); // Export db for Firestore (if needed)
-
-// You can also export other Firebase services (e.g., storage) if you use them in the frontend
+const analytics = getAnalytics(app);
