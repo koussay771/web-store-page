@@ -1,4 +1,9 @@
-// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth"; // تأكد من وجود هذا
+import { getFirestore } from "firebase/firestore"; // وتأكد من وجود هذا
+
+const firebaseConfig = {
+ // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -19,3 +24,9 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+};
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+// ... (يمكنك حذف getAnalytics إذا كنت لا تستخدمها)
