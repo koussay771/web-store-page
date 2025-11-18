@@ -1,0 +1,2 @@
+cd "C:\Users\rogalor\Documents\ai site - Copy\my-gemini-chatbot-backend"
+cd "C:\Users\rogalor\Documents\ai site - Copy\my-gemini-chatbot-frontend"

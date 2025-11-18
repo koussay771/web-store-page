@@ -1,0 +1,12 @@
+# Python
+my-gemini-chatbot-backend/venv/
+__pycache__/
+
+# Node
+my-gemini-chatbot-frontend/node_modules/
+
+# Secrets (Don't share these!)
+.env
+my-gemini-chatbot-backend/.env
+my-gemini-chatbot-backend/firebase_service_account.json
+codes
