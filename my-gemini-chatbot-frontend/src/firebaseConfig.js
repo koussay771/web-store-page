@@ -1,16 +1,11 @@
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth"; // تأكد من وجود هذا
-import { getFirestore } from "firebase/firestore"; // وتأكد من وجود هذا
+// my-gemini-chatbot-frontend/src/firebaseConfig.js
 
-const firebaseConfig = {
- // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getAnalytics } from "firebase/analytics"; // إذا كنت تستخدم Google Analytics
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Your web app's Firebase configuration (القيم الحقيقية التي حصلت عليها)
 const firebaseConfig = {
   apiKey: "AIzaSyDD1PyslzTmA1QIx0YSzwn1vidP63LkKDQ",
   authDomain: "geministore-4dbf8.firebaseapp.com",
@@ -23,10 +18,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-};
 
-const app = initializeApp(firebaseConfig);
+// Initialize services (تأكد من تصدير الخدمات التي تحتاجها)
 export const auth = getAuth(app);
 export const db = getFirestore(app);
-// ... (يمكنك حذف getAnalytics إذا كنت لا تستخدمها)
+// يمكنك حذف السطر التالي إذا لم تكن تستخدم Analytics في تطبيقك:
+const analytics = getAnalytics(app);
