@@ -12,4 +12,15 @@ cd ..
 
 # 2. Install Backend Dependencies
 echo "--- Installing Backend ---"
-pip install -r requirements.txt
+#!/usr/bin/env bash
+
+# 1. Build the Frontend (React App)
+echo "--- Building Frontend ---"
+cd my-gemini-chatbot-frontend
+npm install
+npm run build
+cd ..
+
+# 2. Install Backend Dependencies (تعديل المسار هنا)
+echo "--- Installing Backend ---"
+pip install -r my-gemini-chatbot-backend/requirements.txt
